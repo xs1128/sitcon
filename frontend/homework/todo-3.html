@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>我的待辦事項</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">  </head>
+  <body>
+    <h1 class="board" style="text-align: center;">我的待辦清單</h1>
+
+    <hr>
+
+    <h3>新增待辦事項</h3>
+    <label >新的待辦事項：</label>
+    <input type="text" placeholder="輸入新的待辦事項">
+
+    <br>
+    <label>狀態：</label>
+
+    <select>
+      <option value="true">已完成</option>
+      <option value="false">未完成</option>
+    </select>
+
+    <br>
+    <label>備註：</label>
+    <textarea rows="1" placeholder="輸入詳細備註"></textarea>
+    <br>
+    <button type="button" class="add-btn">新增</button>
+
+    <hr>
+
+    <h3>待完成事項</h3>
+    <ol>
+      <li>
+        <label class="rand_color">
+          <input type="checkbox"> 完成 HTML 作業
+        </label>
+      </li>
+      <li>
+        <label class="rand_color">
+          <input type="checkbox"> 買晚餐<br>記得買飲料
+        </label>
+      </li>
+      <li>
+        <label class="rand_color">
+          <input type="checkbox"> 準備明天的報告<br>整理資料<br>製作投影片
+        </label>
+      </li>
+    </ol>
+
+    <hr>
+
+    <h3>已完成事項</h3>
+    <ul>
+      <li>學習 HTML 基礎</li>
+      <li>整理房間</li>
+    </ul>
+  </body>
+</html>

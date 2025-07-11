@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fetch 教學</title>
+  </head>
+  <body>
+    <h1>Fetch 教學</h1>
+
+    <button onclick="getData()">取得資料</button>
+
+    <div id="result"></div>
+
+    <input type="text" id="todo-input" placeholder="輸入待辦事項" />
+
+    <button onclick="createTodo()">新增</button>
+
+    <script>
+      const API_URL = "http://localhost:8000";
+
+      async function getData() {
+        const response = await fetch(`${API_URL}/todos`);
+        const data = await response.json();
+        let html = "";
+        data.forEach((todo) => {
+          html += "<p>" + todo.title + "</p>";
+        });
+        document.getElementById("result").innerHTML = html;
+      }
+
+      async function createTodo() {
+        const title = document.getElementById("todo-input").value;
+        await fetch(`${API_URL}/todo`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ title }),
+        });
+      }
+    </script>
+  </body>
+</html>

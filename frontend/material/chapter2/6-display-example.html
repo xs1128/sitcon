@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display 屬性教學</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .example {
+        margin: 20px 0;
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .demo-box {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      }
+
+      /* Display 範例樣式 */
+      .block-example {
+        display: block;
+      }
+
+      .inline-example {
+        display: inline;
+        background-color: #ff9800;
+      }
+
+      .inline-block-example {
+        display: inline-block;
+        background-color: #2196f3;
+      }
+
+      .none-example {
+        display: none;
+      }
+
+      .flex-example {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Display 屬性教學</h1>
+      <p>Display 是 CSS 中最重要的屬性之一，它決定了元素如何顯示在網頁上。</p>
+
+      <div class="example">
+        <h2>1. display: block (區塊元素)</h2>
+        <p>區塊元素會佔滿整行的寬度，並且會換行顯示。</p>
+        <div class="demo-box block-example">我是區塊元素 1</div>
+        <div class="demo-box block-example">我是區塊元素 2</div>
+        <div class="demo-box block-example">我是區塊元素 3</div>
+      </div>
+
+      <div class="example">
+        <h2>2. display: inline (行內元素)</h2>
+        <p>行內元素不會換行，會並排顯示在同一行。</p>
+        <span class="demo-box inline-example">行內元素 1</span>
+        <span class="demo-box inline-example">行內元素 2</span>
+        <span class="demo-box inline-example">行內元素 3</span>
+      </div>
+
+      <div class="example">
+        <h2>3. display: inline-block (行內區塊元素)</h2>
+        <p>
+          結合了 inline 和 block 的特性，可以並排顯示，但也可以設定寬度和高度。
+        </p>
+        <div class="demo-box inline-block-example">行內區塊 1</div>
+        <div class="demo-box inline-block-example">行內區塊 2</div>
+        <div class="demo-box inline-block-example">行內區塊 3</div>
+      </div>
+
+      <div class="example">
+        <h2>4. display: none (隱藏元素)</h2>
+        <p>元素會完全隱藏，不佔用任何空間。</p>
+        <div class="demo-box">顯示的元素</div>
+        <div class="demo-box none-example">隱藏的元素（你看不到我）</div>
+        <div class="demo-box">另一個顯示的元素</div>
+      </div>
+
+      <div class="example">
+        <h2>5. display: flex (彈性盒子)</h2>
+        <p>讓子元素可以彈性排列，是現代網頁布局的常用方式。</p>
+        <div class="flex-example">
+          <div class="demo-box">彈性盒子 1</div>
+          <div class="demo-box">彈性盒子 2</div>
+          <div class="demo-box">彈性盒子 3</div>
+        </div>
+      </div>
+
+      <div class="example">
+        <h2>重點整理</h2>
+        <ul>
+          <li><strong>block</strong>：佔滿整行，會換行</li>
+          <li><strong>inline</strong>：並排顯示，不能設定寬高</li>
+          <li><strong>inline-block</strong>：並排顯示，可以設定寬高</li>
+          <li><strong>none</strong>：完全隱藏元素</li>
+          <li><strong>flex</strong>：彈性布局，適合排列多個元素</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

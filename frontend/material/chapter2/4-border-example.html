@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <title>Border Examples</title>
+    <style>
+      /* 全域樣式設定 - 設定整個頁面的基本外觀 */
+      body {
+        font-family: Arial, sans-serif; /* 設定字體為 Arial，如果不支援則使用無襯線字體 */
+        padding: 20px; /* 頁面內邊距 20 像素，讓內容不會貼著瀏覽器邊緣 */
+        background-color: #f5f5f5; /* 設定頁面背景色為淺灰色 */
+      }
+
+      /* 範例區塊樣式 - 每個邊框範例群組的容器 */
+      .example {
+        margin: 20px 0; /* 上下外邊距 20 像素，左右為 0 */
+        padding: 15px; /* 內邊距 15 像素，讓內容與邊框有距離 */
+        background-color: white; /* 背景色設為白色，與頁面背景形成對比 */
+      }
+
+      /* 標題樣式設定 */
+      h2 {
+        color: #333; /* 文字顏色設為深灰色 */
+        margin-bottom: 10px; /* 下方外邊距 10 像素，與下方內容保持距離 */
+      }
+
+      /* 示範方塊的基本樣式 - 所有邊框範例都會套用這個樣式 */
+      .demo-box {
+        padding: 20px; /* 內邊距 20 像素，讓文字不會貼著邊框 */
+        margin: 10px 0; /* 上下外邊距 10 像素，讓每個範例之間有間隔 */
+        text-align: center; /* 文字置中對齊 */
+        background-color: #f9f9f9; /* 設定淺灰色背景，讓邊框更明顯 */
+      }
+
+      /* === 基本邊框樣式 === */
+
+      /* 實線邊框 - border: 寬度 樣式 顏色 */
+      .solid-border {
+        border: 3px solid #6bff93; /* 3像素寬的綠色實線邊框 */
+      }
+
+      /* 虛線邊框 - dashed 會產生一段一段的虛線效果 */
+      .dashed-border {
+        border: 3px dashed #4ecdc4; /* 3像素寬的青色虛線邊框 */
+      }
+
+      /* 點線邊框 - dotted 會產生一點一點的邊框效果 */
+      .dotted-border {
+        border: 3px dotted #45b7d1; /* 3像素寬的藍色點線邊框 */
+      }
+
+      /* 雙線邊框 - double 會產生雙線效果，寬度至少要 3px 才看得出效果 */
+      .double-border {
+        border: 5px double #96ceb4; /* 5像素寬的綠色雙線邊框 */
+      }
+
+      /* === 3D 效果邊框樣式 === */
+
+      /* 凹槽邊框 - groove 會產生內凹的 3D 效果 */
+      .groove-border {
+        border: 5px groove #feca57; /* 5像素寬的黃色凹槽邊框 */
+      }
+
+      /* 凸脊邊框 - ridge 會產生外凸的 3D 效果，與 groove 相反 */
+      .ridge-border {
+        border: 5px ridge #ff9ff3; /* 5像素寬的粉色凸脊邊框 */
+      }
+
+      /* 內嵌邊框 - inset 會讓整個元素看起來像是內凹進去 */
+      .inset-border {
+        border: 5px inset #54a0ff; /* 5像素寬的藍色內嵌邊框 */
+      }
+
+      /* 外凸邊框 - outset 會讓整個元素看起來像是外凸出來 */
+      .outset-border {
+        border: 5px outset #5f27cd; /* 5像素寬的紫色外凸邊框 */
+      }
+
+      /* === 不同邊框寬度示範 === */
+
+      /* 細邊框 - 1 像素是最細的邊框 */
+      .thin-border {
+        border: 1px solid #2d3436; /* 1像素寬的深灰色實線邊框 */
+      }
+
+      /* 中等邊框 - 5 像素是中等粗細 */
+      .medium-border {
+        border: 5px solid #2d3436; /* 5像素寬的深灰色實線邊框 */
+      }
+
+      /* 粗邊框 - 10 像素是很粗的邊框 */
+      .thick-border {
+        border: 10px solid #2d3436; /* 10像素寬的深灰色實線邊框 */
+      }
+
+      /* === 單邊邊框設定 === */
+      /* 可以分別設定上、右、下、左四個邊的邊框 */
+
+      /* 只有上邊框 - border-top 只影響元素的上邊 */
+      .top-border {
+        border-top: 4px solid #e17055; /* 只在上方加 4像素橘色實線邊框 */
+      }
+
+      /* 只有右邊框 - border-right 只影響元素的右邊 */
+      .right-border {
+        border-right: 4px solid #00b894; /* 只在右方加 4像素綠色實線邊框 */
+      }
+
+      /* 只有下邊框 - border-bottom 只影響元素的下邊 */
+      .bottom-border {
+        border-bottom: 4px solid #0984e3; /* 只在下方加 4像素藍色實線邊框 */
+      }
+
+      /* 只有左邊框 - border-left 只影響元素的左邊 */
+      .left-border {
+        border-left: 4px solid #a29bfe; /* 只在左方加 4像素紫色實線邊框 */
+      }
+
+      /* === 混合邊框樣式 === */
+      /* 可以讓四個邊有不同的樣式、寬度和顏色 */
+      .mixed-borders {
+        border-top: 3px solid #fd79a8; /* 上邊：3像素粉色實線 */
+        border-right: 3px dashed #fdcb6e; /* 右邊：3像素黃色虛線 */
+        border-bottom: 3px dotted #6c5ce7; /* 下邊：3像素紫色點線 */
+        border-left: 3px double #00b894; /* 左邊：3像素綠色雙線 */
+      }
+
+      /* === 彩色邊框範例 === */
+      /* 使用不同顏色展示邊框的視覺效果 */
+
+      /* 紅色邊框 - 使用 16進位色碼 #ff0000 表示純紅色 */
+      .red-border {
+        border: 3px solid #ff0000;
+      }
+
+      /* 藍色邊框 - 使用 16進位色碼 #0000ff 表示純藍色 */
+      .blue-border {
+        border: 3px solid #0000ff;
+      }
+
+      /* 綠色邊框 - 使用 16進位色碼 #00ff00 表示純綠色 */
+      .green-border {
+        border: 3px solid #00ff00;
+      }
+
+      /* 紫色邊框 - 使用 16進位色碼 #800080 表示紫色 */
+      .purple-border {
+        border: 3px solid #800080;
+      }
+
+      /* 橘色邊框 - 使用 16進位色碼 #ffa500 表示橘色 */
+      .orange-border {
+        border: 3px solid #ffa500;
+      }
+
+      /* === 圓角邊框（Border Radius）=== */
+
+      /* 圓角邊框 - border-radius 可以讓方形邊框變成圓角 */
+      .rounded-border {
+        border: 3px solid #74b9ff; /* 3像素藍色實線邊框 */
+        border-radius: 10px; /* 圓角半徑 10像素，讓四個角都變圓 */
+      }
+
+      /* 圓形邊框 - 當 border-radius 設為 50% 且元素為正方形時會變成圓形 */
+      .circle-border {
+        border: 3px solid #e84393; /* 3像素粉色實線邊框 */
+        border-radius: 50%; /* 圓角半徑 50%，讓正方形變成圓形 */
+        width: 100px; /* 寬度 100像素 */
+        height: 100px; /* 高度 100像素，與寬度相同形成正方形 */
+        display: flex; /* 使用 Flexbox 布局 */
+        align-items: center; /* 垂直置中對齊 */
+        justify-content: center; /* 水平置中對齊 */
+      }
+
+      /* === 特殊邊框效果 === */
+
+      /* 透明邊框 - transparent 關鍵字讓邊框透明，但仍佔據空間 */
+      .transparent-border {
+        border: 5px solid transparent; /* 5像素透明邊框，看不見但會佔空間 */
+        background-color: #dda0dd; /* 設定背景色為紫色，讓效果更明顯 */
+      }
+
+      /* 無邊框 - none 關鍵字完全移除邊框 */
+      .no-border {
+        border: none; /* 完全沒有邊框 */
+        background-color: #98fb98; /* 設定背景色為淺綠色 */
+      }
+
+      /* === 複雜邊框組合範例 === */
+
+      /* 複雜邊框組合 1 - 結合一般邊框、特殊上邊框和圓角 */
+      .complex-border-1 {
+        border: 2px solid #2d3436; /* 基本 2像素深灰色邊框 */
+        border-top: 8px solid #e17055; /* 特別加粗的上邊框，8像素橘色 */
+        border-radius: 5px; /* 5像素圓角，讓邊框更柔和 */
+      }
+
+      /* 複雜邊框組合 2 - 左右邊框與上下邊框使用不同樣式 */
+      .complex-border-2 {
+        border-left: 6px solid #00b894; /* 左邊：6像素綠色實線 */
+        border-right: 6px solid #00b894; /* 右邊：6像素綠色實線 */
+        border-top: 2px dashed #74b9ff; /* 上邊：2像素藍色虛線 */
+        border-bottom: 2px dashed #74b9ff; /* 下邊：2像素藍色虛線 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 主標題 -->
+    <h1>Border Examples Gallery</h1>
+
+    <!-- 基本邊框樣式展示區 -->
+    <div class="example">
+      <h2>基本邊框樣式 (Basic Border Styles)</h2>
+      <!-- solid: 實線邊框，最常用的邊框樣式 -->
+      <div class="demo-box solid-border">Solid Border - 實線邊框</div>
+      <!-- dashed: 虛線邊框，由一段一段的線組成 -->
+      <div class="demo-box dashed-border">Dashed Border - 虛線邊框</div>
+      <!-- dotted: 點線邊框，由一個一個的點組成 -->
+      <div class="demo-box dotted-border">Dotted Border - 點線邊框</div>
+      <!-- double: 雙線邊框，需要足夠的寬度才能看到效果 -->
+      <div class="demo-box double-border">Double Border - 雙線邊框</div>
+    </div>
+
+    <!-- 3D 效果邊框展示區 -->
+    <div class="example">
+      <h2>3D 邊框樣式 (3D Border Styles)</h2>
+      <!-- groove: 凹槽效果，看起來像刻在表面上的溝槽 -->
+      <div class="demo-box groove-border">Groove Border - 凹槽邊框</div>
+      <!-- ridge: 凸脊效果，看起來像從表面凸出的脊線 -->
+      <div class="demo-box ridge-border">Ridge Border - 凸脊邊框</div>
+      <!-- inset: 內嵌效果，整個元素看起來像是凹進去 -->
+      <div class="demo-box inset-border">Inset Border - 內嵌邊框</div>
+      <!-- outset: 外凸效果，整個元素看起來像是凸出來 -->
+      <div class="demo-box outset-border">Outset Border - 外凸邊框</div>
+    </div>
+
+    <!-- 不同寬度邊框展示區 -->
+    <div class="example">
+      <h2>不同邊框寬度 (Different Border Widths)</h2>
+      <!-- 展示 1px, 5px, 10px 三種不同寬度的邊框效果 -->
+      <div class="demo-box thin-border">Thin Border (1px) - 細邊框</div>
+      <div class="demo-box medium-border">Medium Border (5px) - 中等邊框</div>
+      <div class="demo-box thick-border">Thick Border (10px) - 粗邊框</div>
+    </div>
+
+    <!-- 單邊邊框展示區 -->
+    <div class="example">
+      <h2>單邊邊框 (Individual Border Sides)</h2>
+      <!-- 分別展示只有一邊有邊框的效果 -->
+      <div class="demo-box top-border">Top Border Only - 只有上邊框</div>
+      <div class="demo-box right-border">Right Border Only - 只有右邊框</div>
+      <div class="demo-box bottom-border">Bottom Border Only - 只有下邊框</div>
+      <div class="demo-box left-border">Left Border Only - 只有左邊框</div>
+    </div>
+
+    <!-- 混合邊框樣式展示區 -->
+    <div class="example">
+      <h2>混合邊框樣式 (Mixed Border Styles)</h2>
+      <!-- 四個邊使用不同的樣式、顏色，展示高度自訂化的可能性 -->
+      <div class="demo-box mixed-borders">
+        Different Style on Each Side - 每邊不同樣式
+      </div>
+    </div>
+
+    <!-- 彩色邊框展示區 -->
+    <div class="example">
+      <h2>彩色邊框 (Colored Borders)</h2>
+      <!-- 使用不同顏色展示邊框的視覺變化 -->
+      <div class="demo-box red-border">Red Border - 紅色邊框</div>
+      <div class="demo-box blue-border">Blue Border - 藍色邊框</div>
+      <div class="demo-box green-border">Green Border - 綠色邊框</div>
+      <div class="demo-box purple-border">Purple Border - 紫色邊框</div>
+      <div class="demo-box orange-border">Orange Border - 橘色邊框</div>
+    </div>
+
+    <!-- 圓角邊框展示區 -->
+    <div class="example">
+      <h2>圓角邊框 (Rounded Borders)</h2>
+      <!-- border-radius 讓邊框不再是尖銳的直角 -->
+      <div class="demo-box rounded-border">
+        Rounded Corner Border - 圓角邊框
+      </div>
+      <!-- 50% 的 border-radius 配合正方形可以做出完美的圓形 -->
+      <div class="demo-box circle-border">Circle Border - 圓形邊框</div>
+    </div>
+
+    <!-- 特殊邊框展示區 -->
+    <div class="example">
+      <h2>特殊邊框 (Special Borders)</h2>
+      <!-- transparent 讓邊框透明但仍佔據空間 -->
+      <div class="demo-box transparent-border">
+        Transparent Border - 透明邊框
+      </div>
+      <!-- none 完全移除邊框 -->
+      <div class="demo-box no-border">No Border - 無邊框</div>
+    </div>
+
+    <!-- 複雜邊框組合展示區 -->
+    <div class="example">
+      <h2>複雜邊框組合 (Complex Border Combinations)</h2>
+      <!-- 結合多種邊框屬性創造複雜的視覺效果 -->
+      <div class="demo-box complex-border-1">
+        Complex Border Style 1 - 複雜邊框樣式 1
+      </div>
+      <div class="demo-box complex-border-2">
+        Complex Border Style 2 - 複雜邊框樣式 2
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Bounding Box 展示</title>
+    <style>
+      body {
+        background-color: white;
+        margin: 20px;
+      }
+
+      h1 {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 2px solid black;
+      }
+
+      h2 {
+        background-color: #e0e0e0;
+        padding: 15px;
+        border: 1px solid black;
+      }
+
+      .border {
+        border: 3px dashed black;
+      }
+
+      /* Padding 展示區域 */
+      .padding-demo-1 {
+        background-color: lightblue;
+        border: 3px solid blue;
+        padding: 10px;
+      }
+
+      .padding-demo-2 {
+        background-color: lightgreen;
+        border: 3px solid green;
+        padding: 30px;
+      }
+
+      .padding-demo-3 {
+        background-color: lightyellow;
+        border: 3px solid orange;
+        padding: 10px 30px;
+      }
+
+      .padding-demo-4 {
+        background-color: lightpink;
+        border: 3px solid red;
+        padding: 5px 15px 25px 35px;
+      }
+
+      /* Margin 展示區域 */
+      .margin-demo-1 {
+        background-color: lightcoral;
+        border: 3px solid darkred;
+        margin: 10px;
+      }
+
+      .margin-demo-2 {
+        background-color: lightseagreen;
+        border: 3px solid darkgreen;
+        margin: 40px;
+      }
+
+      .margin-demo-3 {
+        background-color: lightsalmon;
+        border: 3px solid darkorange;
+        margin: 20px 50px;
+      }
+
+      .margin-demo-4 {
+        background-color: lightsteelblue;
+        border: 3px solid darkblue;
+        margin: 10px 20px 30px 40px;
+      }
+
+      .margin-demo-5 {
+        background-color: lightgray;
+        border: 3px solid black;
+        margin: 0;
+      }
+
+      .content {
+        background-color: white;
+        border: 1px solid gray;
+      }
+    </style>
+    display
+  </head>
+
+  <body>
+    <h1>CSS Bounding Box 展示</h1>
+
+    <h2>Padding</h2>
+
+    <div class="padding-demo-1">
+      <div class="content">padding: 10px</div>
+    </div>
+
+    <div class="padding-demo-2">
+      <div class="content">padding: 30px</div>
+    </div>
+
+    <div class="padding-demo-3">
+      <div class="content">padding: 10px 30px</div>
+    </div>
+
+    <div class="padding-demo-4">
+      <div class="content">padding: 5px 15px 25px 35px</div>
+    </div>
+
+    <h2>Margin</h2>
+    <div class="border">
+      <div class="margin-demo-1">
+        <div class="content">margin: 10px</div>
+      </div>
+    </div>
+
+    <div class="border">
+      <div class="margin-demo-2">
+        <div class="content">margin: 4display0px</div>
+      </div>
+    </div>
+
+    <div class="boeder">
+      <div class="margin-demo-3">
+        <div class="content">margin: 20px 50px</div>
+      </div>
+    </div>
+
+    <div class="margin-demo-4">
+      <div class="content">margin: 10px 20px 30px 40px</div>
+    </div>
+
+    <div class="margin-demo-5">
+      <div class="content">margin: 0</div>
+    </div>
+  </body>
+</html>

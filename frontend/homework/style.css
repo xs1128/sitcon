@@ -1,0 +1,52 @@
+* {
+    color: white;
+    font-family: "LXGW WenKai TC", cursive;
+    font-size: 120%;
+}
+
+.board{
+    background-color: #22222a;
+}
+
+.add-btn{
+    background-color: rgb(227, 66, 52);
+    border-radius: 5px;
+}
+
+h3, ul, ol, li, label{
+    font-size: 101%;
+    color: rgb(152, 255, 152);
+}
+
+label{
+    font-size: 150%;
+    color: bisque;
+}
+
+h3{
+    font-size: 200%;
+}
+
+h1{
+    font-size: 250%;
+    border: 2px solid rgb(152, 255, 152);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #22222a;
+}
+
+input, select, textarea{
+    border: 2px solid rgb(152, 255, 152);
+    border-radius: 5px;
+    background-color: #22222a;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+div{
+    border: 2px solid rgb(152, 255, 152);
+    border-radius: 10px;
+    background-color: #22222a;
+    margin-bottom: 50px;
+    padding: 1em;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Width 和 Height 屬性教學</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .example {
+        margin: 20px 0;
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .demo-box {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        margin: 10px 0;
+        text-align: center;
+        border: 2px solid #333;
+      }
+
+      /* Width 範例 */
+      .width-small {
+        width: 100px;
+      }
+
+      .width-medium {
+        width: 200px;
+      }
+
+      .width-large {
+        width: 400px;
+      }
+
+      .width-percent {
+        width: 50%;
+      }
+
+      /* Height 範例 */
+      .height-small {
+        height: 50px;
+      }
+
+      .height-medium {
+        height: 100px;
+      }
+
+      .height-large {
+        height: 150px;
+      }
+
+      /* 組合範例 */
+      .fixed-size {
+        width: 200px;
+        height: 100px;
+      }
+
+      .square {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Width 和 Height 屬性教學</h1>
+      <p>Width（寬度）和 Height（高度）是用來控制元素大小的基本 CSS 屬性。</p>
+
+      <div class="example">
+        <h2>1. Width（寬度）控制</h2>
+        <p>Width 決定元素的寬度，可以用像素（px）或百分比（%）來設定。</p>
+
+        <div class="demo-box width-small">寬度 100px</div>
+        <div class="demo-box width-medium">寬度 200px</div>
+        <div class="demo-box width-large">寬度 400px</div>
+        <div class="demo-box width-percent">寬度 50%</div>
+      </div>
+
+      <div class="example">
+        <h2>2. Height（高度）控制</h2>
+        <p>Height 決定元素的高度，通常用像素（px）來設定。</p>
+
+        <div class="demo-box height-small">高度 50px</div>
+        <div class="demo-box height-medium">高度 100px</div>
+        <div class="demo-box height-large">高度 150px</div>
+      </div>
+
+      <div class="example">
+        <h2>3. 同時設定 Width 和 Height</h2>
+        <p>可以同時設定寬度和高度來完全控制元素的大小。</p>
+
+        <div class="demo-box fixed-size">寬 200px × 高 100px</div>
+        <div class="demo-box square">正方形 150px × 150px</div>
+      </div>
+    </div>
+  </body>
+</html>

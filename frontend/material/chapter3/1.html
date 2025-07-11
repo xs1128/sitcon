@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <button onclick="alert('Hello Wrold')">你好</button>
+    <button onclick="exampleFunction('我不好')">你好</button>
+    <script>
+      const a = 1; // Number 數字
+      const b = 2; // Number 數字
+      let c = 3; // Number 數字
+
+      console.log(a);
+
+      // const vs let
+      // console.log(c);
+
+
+      // String 字串
+      const iAmString = "Hello World";
+
+      // Boolean 布林值
+      const iAmBoolean = true;
+
+      // Array 陣列 (Python 中的 List)
+      const fruits = ["apple", "banana", "cherry"];
+
+      // Object 物件
+      const person = { name: "John", age: 20 };
+      person.name = "Jane";
+      person.age = 21;
+
+      // Object 放在 Array 裡
+      const people = [
+        { name: "John", age: 20 },
+        { name: "Jane", age: 21 },
+      ];
+
+      // TODO: 要怎麼顯示出第一個 people 的人名？
+
+      // 條件判斷
+
+      // a = 1, b = 2
+      // if (a > b) {
+      //   alert("a > b");
+      // } else if (a < b) {
+      //   alert("a < b");
+      // } else {
+      //   alert("a = b");
+      // }
+
+      c = 5;
+      if (c > b) {
+        alert("c > b");
+      } else if (c < b) {
+        alert("c < b");
+      } else {
+        alert("c = b");
+      }
+      if (a > b) {
+      }
+      // 且 (Python 中的 and)
+      if (a && b) {
+      }
+      // 或 (Python 中的 or)
+      if (a || b) {
+      }
+      // 非 (Python 中的 not)
+      if (!a) {
+      }
+
+      // function
+      function add(a, b) {
+        return a + b;
+      }
+      // function alert
+      function exampleFunction(message) {
+        alert(message);
+      }
+    </script>
+  </body>
+</html>

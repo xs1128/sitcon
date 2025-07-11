@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="result"></p>
+
+    <button onclick="exampleFunction()">範例1</button>
+
+    <br>
+
+
+    <input type="text" id="input" placeholder="請輸入你的名字" />
+    <button onclick="exampleFunction2()">範例2</button>
+
+    <script>
+      const hello = "Hello";
+      const world = "World";
+
+      // function
+      function exampleFunction() {
+        document.getElementById("result").innerText = `${hello} ${world}！`;
+      }
+
+      // document.getElementById("result").innerText = `${hello} ${world}！`;
+
+      // input
+      function exampleFunction2() {
+        const input = document.getElementById("input").value;
+        document.getElementById("result").innerText = `您好，${input}！`;
+        document.getElementById("input").value = "";
+      }
+
+      // forEach
+      // const fruits = ["apple", "banana", "cherry"];
+      // const newFruits = fruits.forEach((fruit) => {
+      //   console.log(fruit + "s");
+      // });
+
+      fruits.forEach((fruit) => {
+        document.getElementById("result").innerHTML += `<p>${fruit}</p>`;
+      });
+    </script>
+  </body>
+</html>

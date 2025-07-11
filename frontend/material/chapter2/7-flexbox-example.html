@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 基礎教學</title>
+    <style>
+      /* 基本樣式 */
+      .container {
+        border: 3px solid #333;
+        margin: 20px 0;
+        padding: 10px;
+        background-color: #f0f0f0;
+      }
+
+      .item {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        margin: 5px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      /* Flexbox 設定 */
+      .flex-container {
+        display: flex;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+      }
+
+      .flex-space-between {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .flex-column {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox 基礎教學</h1>
+
+    <h2>1. 基本的 Flex 容器</h2>
+    <div class="container flex-container">
+      <div class="item">項目 1</div>
+      <div class="item">項目 2</div>
+      <div class="item">項目 3</div>
+    </div>
+    <p><strong>CSS:</strong> <code>display: flex;</code></p>
+
+    <h2>2. 水平與垂直置中</h2>
+    <div class="container flex-center">
+      <div class="item">我在正中間</div>
+    </div>
+    <p>
+      <strong>CSS:</strong>
+      <code>justify-content: center; align-items: center;</code>
+    </p>
+
+    <h2>3. 平均分散排列</h2>
+    <div class="container flex-space-between">
+      <div class="item">左邊</div>
+      <div class="item">中間</div>
+      <div class="item">右邊</div>
+    </div>
+    <p><strong>CSS:</strong> <code>justify-content: space-between;</code></p>
+
+    <h2>4. 垂直排列</h2>
+    <div class="container flex-column">
+      <div class="item">第一個</div>
+      <div class="item">第二個</div>
+      <div class="item">第三個</div>
+    </div>
+    <p><strong>CSS:</strong> <code>flex-direction: column;</code></p>
+  </body>
+</html>
